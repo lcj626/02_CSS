@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 우선 순위</title>
+</head>
+<style>
+    *{
+        color: blue;
+    }
+    #item1{
+        color: red;
+    }
+    [name="item2"]{
+        color: green;
+    }
+    .item3{
+        color: yellow;
+    }
+    .item4{
+        color: black;
+    }
+    /* !important로 color 색상 강제화 */
+    #item4{
+        color: blueviolet !important;
+        background-color: aquamarine;
+    }
+</style>
+<body>
+    <ul>
+        <li id="item1">아이템1</li>
+        <li name="item2">아이템2</li>
+        <li class="item3">아이템3</li>
+        <li style="color: aqua;" id="item4" class="item4">아이템4</li>
+        <li>아이템5</li>
+        <li>아이템6</li>
+        <li>아이템7</li>
+        <li>아이템8</li>
+    </ul>
+</body>
+</html>
